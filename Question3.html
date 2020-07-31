@@ -1,0 +1,23 @@
+<html>
+<head>
+    <title>Question3</title>
+</head>
+<body>
+    <h3 id="info"></h3>
+    <script>
+        fetch("https://type.fit/api/quotes")
+        .then(Response=>Response.json())
+        .then(data=>
+        {
+           
+            let index=Math.floor(Math.random()*data.length);
+            document.getElementById("info").innerHTML=data[index]['text']
+            console.log(data[index]);
+        });
+        
+        
+       
+    </script>
+    Quote of the day
+</body>
+</html>
